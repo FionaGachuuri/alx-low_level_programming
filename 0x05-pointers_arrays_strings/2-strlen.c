@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
- * void swap_int -  function that swaps the values of a and b
- * @a : swaped to contain values of b
- * @b : swaped to contain values of a
- * Return : (0) if success
+ * _strlen - function that calls for the return of a string
+ * @s - string to be measured
+ * Return : the length of the string
  */
 
-void swap_int(int *a, int *b)
+int _strlen(char *s)
+
 {
-	int swap;
-	swap = *a;
-	*a = *b;
-	*b = swap;
+	int string_length = 0;
+
+	while  (s[string_length])
+		string_length++;
+	return (string_length);
 }
