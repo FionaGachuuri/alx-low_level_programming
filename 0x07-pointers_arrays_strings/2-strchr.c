@@ -2,23 +2,18 @@
 /**
  * _strchr -finction that locates a character in a string
  * @s: the string to search
- * @c: icharacter to be located
- * Return: the pointer to the first instance of c in s,
- * or NULL if c is not found
+ * @c: the character to be located
+ * Return: Always 0 if  (success)
  */
+
 char *_strchr(char *s, char c)
 {
-	while (*s)
+	int i = 0;
+
+	for (; s[i] >= '\0'; i++)
 	{
-		if (*s == c)
-		{
-			return (s);
-		}
-		s++;
+		if (s[i] == c)
+			return (&s[i]);
 	}
-	if (c == '\0')
-	{
-		return (s);
-	}
-	return (NULL);
+	return (0);
 }
