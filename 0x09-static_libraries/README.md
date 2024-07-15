@@ -1,3 +1,25 @@
-0x09-static-libraries
-Create the static library libmy.a
-Create a script called create-stati-lib.sh that creates a static library called liball.a from all the .c files that are in the current directory.
+# Static Libraries
+
+This project contains a static library `libmy.a` with the following functions:
+
+- _putchar
+- _islower
+- _isalpha
+- _abs
+- _isupper
+- _isdigit
+- _strlen
+- _puts
+- _strcpy
+- _atoi
+- _strcat
+- _strncat
+- _strncpy
+- _strcmp
+- _memset
+- _memcpy
+- _strchr
+- _strspn
+- _strpbrk
+- _strstr
+
