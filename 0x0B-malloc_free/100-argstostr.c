@@ -4,7 +4,7 @@
 
 /**
  * argstostr -function that concatenates
- * all the arguments of your program.
+ * all the arguments of the program.
  * @ac: argument count
  * @av: pointer to the array of size ac
  * Return: NULL if ac == 0 or av == NULL,
@@ -15,17 +15,18 @@
 
 char *argstostr(int ac, char **av)
 {
-	int a, b, c, total_length;
+	int total_length = 0;
+	int c = 0;
+	int a = 0;
 	char *str;
 
-	total_length = 0;
-	c = 0;
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	a = 0;
 	while (a < ac)
 	{
-		b = 0;
+		int b = 0;
+
 		while (av[a][b])
 		{
 			total_length++;
@@ -34,13 +35,14 @@ char *argstostr(int ac, char **av)
 		total_length++;
 		a++;
 	}
+
 	str = malloc((sizeof(char) * total_length) + 1);
 	if (str == NULL)
 		return (NULL);
 	a = 0;
 	while (a < ac)
 	{
-		b = 0;
+		int b = 0;
 		while (av[a][b])
 		{
 			str[c] = av[a][b];
