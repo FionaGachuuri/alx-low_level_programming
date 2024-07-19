@@ -13,7 +13,7 @@
 char *_strdup(char *str)
 {
 	char *dupl;
-	unsigned int j, length;
+	unsigned int j, length = 0;
 
 	if (str == NULL)
 	{
@@ -24,8 +24,7 @@ char *_strdup(char *str)
 		length++;
 	}
 
-	dupl = (char *)malloc((length + 1) * sizeof(char));
-	
+	dupl = malloc((length + 1) * sizeof(char));
 
 	if (dupl == NULL)
 	{
