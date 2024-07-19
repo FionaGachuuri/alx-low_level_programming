@@ -16,17 +16,25 @@ char *_strdup(char *str)
 	unsigned int j, length;
 
 	if (str == NULL)
+	{
 		return (NULL);
+	}
 	for (length = 0; str[length] != '\0'; length++)
+	{
 
 		dupl = malloc((length + 1) * sizeof(char));
+	}
 
 	if (dupl == NULL)
+	{
 		return (NULL);
+	}
 
 	for (j = 0; j < length; j++)
+	{
 
 		dupl[j] = str[j];
+	}
 
 	dupl[length] = '\0';
 
