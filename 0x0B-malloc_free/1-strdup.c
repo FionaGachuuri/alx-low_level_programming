@@ -19,11 +19,13 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	for (length = 0; str[length] != '\0'; length++)
+	while (str[length] != '\0')
 	{
-
-		dupl = (char *)malloc((length + 1) * sizeof(char));
+		length++;
 	}
+
+	dupl = (char *)malloc((length + 1) * sizeof(char));
+	
 
 	if (dupl == NULL)
 	{
