@@ -12,22 +12,22 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *array;
+	int *arr;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
 
-	array = malloc(nmemb * sizeof(int));
+	arr = malloc(nmemb * sizeof(int));
 
-	if (array == NULL)
+	if (arr == NULL)
 	{
 		return (NULL);
 
 	}
-	memset(array, 0, nmemb * size);
-	return (array);
+	memset(arr, 0, nmemb * size);
+	return (arr);
 }
 
 
