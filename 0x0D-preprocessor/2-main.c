@@ -1,23 +1,14 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
-  *main -entry point(prints name of the file)
+  *main -entry point
   *
   *Return: 0 on success
   */
 
 int main(void)
 {
-	char *name = __FILE__;
-	int i;
-
-	for (i = 0; name[i] != '\0'; i++)
-	{
-		_putchar(name[i]);
-
-	}
-
-	_putchar('\n');
+	printf("%s\n", __FILE__);
 
 return (0);
 }
