@@ -3,18 +3,18 @@
 /**
   *main -entry point(prints name of the file)
   *
-  *Return: void
+  *Return: 0 on success
   */
 
 int main(void)
 {
 	char *name = __FILE__;
+	int i;
 
-	while (*name)
+	for (i = 0; name[i] != '\0'; i++)
 	{
-		_putchar(*name);
+		_putchar(name[i]);
 
-		name++;
 	}
 
 	_putchar('\n');
