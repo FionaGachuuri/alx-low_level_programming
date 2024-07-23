@@ -2,12 +2,11 @@
 #define _DOG_H
 
 /**
-  *struct dog -description of a dog
+  *struct dog - description of a dog
   *@name: name of the dog
   *@age: age of the dog
-  *@owner: owner of the dog
+  *@owner: name of the owner
   */
-
 typedef struct dog
 {
 	char *name;
