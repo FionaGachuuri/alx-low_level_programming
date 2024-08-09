@@ -6,7 +6,7 @@
   *binary number to an unsigned int.
   *@b: pointer to a string of 0 and 1 chars
   *
-  *Return: Converted number,or 1 if b is NULL,or 0
+  *Return: Converted number,or 0 if b is NULL,or 0
   *if there is one or more chars in the string b that is not 0
   */
 
@@ -16,7 +16,7 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 	{
-		return (1);
+		return (0);
 	}
 
 	while (*b)
