@@ -1,19 +1,25 @@
 #include "main.h"
+
 /**
- *_strcmp -function that compares two strings
- *@s1: first string
- *@s2: the second string
- *Return: zero if s1 and s2 are equal,
- *negative if the s1 is lexicographically lesser than s2,
- *otherwise result is positive
- */
+ * _strcmp - compartes string.
+ * @s1: argument 1.
+ * @s2: argument 2.
+ * Return: difference.
+*/
 
 int _strcmp(char *s1, char *s2)
 {
-	while (*s1 && (*s1 == *s2))
+	int difference = 0;
+
+	while (*s1 != '\0' && *s2 != '\0')
 	{
+		if (*s1 != *s2)
+		{
+			difference = (*s1 - *s2);
+			return (difference);
+		}
 		s1++;
 		s2++;
 	}
-	return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	return (difference);
 }

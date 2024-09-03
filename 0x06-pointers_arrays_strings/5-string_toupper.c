@@ -1,22 +1,21 @@
 #include "main.h"
 
 /**
- *string_toupper -function that changes a strings lowercase to uppercase
- *@str: string to be ammended
- *Return: new , ammended string
- */
-
+ * string_toupper - change lower case letters to uppercase.
+ * @str: string to turn to uppercase.
+ * Return: (str)
+*/
 char *string_toupper(char *str)
 {
-	int j = 0;
+	char *ptr = str;
 
-	while (str[j] != '\0')
+	while (*ptr != '\0')
 	{
-		if (str[j] >= 'a' && str[j] <= 'z')
+		if (*ptr >= 'a' && *ptr <= 'z')
 		{
-			str[j] = str[j] - 32;
+			*ptr = *ptr + ('A' - 'a');
 		}
-		j++;
+		ptr++;
 	}
 	return (str);
 }
