@@ -3,7 +3,7 @@
 /**
  * main - entry point
  *
- * Description: print lowercase alphabet
+ * Description: display lowercase alphabet exept q and e
  * Return: always 0 (Success)
  */
 int main(void)
@@ -11,7 +11,11 @@ int main(void)
 	int letter = 'a';
 
 	while (letter <= 'z')
-		putchar(letter++);
+	{
+		if (letter != 'q' && letter != 'e')
+			putchar(letter);
+		letter++;
+	}
 	putchar('\n');
 	return (0);
 }

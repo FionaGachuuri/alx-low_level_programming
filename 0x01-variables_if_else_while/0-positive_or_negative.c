@@ -3,9 +3,10 @@
 #include <stdio.h>
 
 /**
- * main - assigns a random number to int n everytime
- * it executes, and prints it
- * Return: Always 0 (Success)
+ * main - entry point
+ *
+ * Description: checking if a random number is positive, negative or null
+ * Return: always 0 (Success)
  */
 int main(void)
 {
@@ -15,9 +16,9 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 		printf("%d is positive\n", n);
-	else if (n == 0)
-		printf("%d is zero\n", n);
 	else if (n < 0)
 		printf("%d is negative\n", n);
+	else
+		printf("%d is zero\n", n);
 	return (0);
 }

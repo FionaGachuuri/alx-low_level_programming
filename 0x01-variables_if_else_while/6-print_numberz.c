@@ -3,15 +3,15 @@
 /**
  * main - entry point
  *
- * Description: print lowercase alphabet
+ * Description: print single digit numbers with putchar
  * Return: always 0 (Success)
  */
 int main(void)
 {
-	int letter = 'a';
+	int digit = '0';
 
-	while (letter <= 'z')
-		putchar(letter++);
+	while (digit <= '9')
+		putchar(digit++);
 	putchar('\n');
 	return (0);
 }

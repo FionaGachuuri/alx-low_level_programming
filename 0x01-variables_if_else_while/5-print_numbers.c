@@ -3,15 +3,15 @@
 /**
  * main - entry point
  *
- * Description: print lowercase alphabet
+ * Description: print all single digits of base 10
  * Return: always 0 (Success)
  */
 int main(void)
 {
-	int letter = 'a';
+	int n = 0;
 
-	while (letter <= 'z')
-		putchar(letter++);
+	while (n < 10)
+		printf("%d", n++);
 	putchar('\n');
 	return (0);
 }
