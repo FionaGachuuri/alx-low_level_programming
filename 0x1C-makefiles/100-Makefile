@@ -14,7 +14,7 @@ $(NAME): $(OBJ)
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
-	$(RM) *~
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
@@ -23,3 +23,8 @@ fclean: clean oclean
 	$(RM) $(NAME)
 
 re: fclean all
+
+m.h:
+   @echo "Header file m.h is missing!" && exit 1
+
+   $(NAME): m.h
